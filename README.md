@@ -15,7 +15,7 @@ Kernel patch to disable process ASLR on 4.05
 *(uint16_t*)(kernelBase + 0x2862D6) = 0x9090;
 ```
 ```
-CrazyVoid's patches to allow webkit (4.05)
+// CrazyVoid's patches to allow webkit (4.05)
 #define KERNEL_REGMGR_SETINT 0x4CEAB0
 uint64_t *(sceRegMgrSetInt)(uint32_t regId, int value) = NULL;
 sceRegMgrSetInt = (void *)&ptrKernel[KERNEL_REGMGR_SETINT];
