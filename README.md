@@ -32,6 +32,11 @@ sceRegMgrSetInt(0x3C040000, 0);
 
 ```
 // <WildCard - KernelDumper>
+// uart enabler
+*(char *)(kernel_base + 0x186b0a0) = 0; // set the console disable console output bool
+```
+
+```
 // specters debug settings patchs
 *(char *)(kernel_base + 0x186b0a0) = 0; 
 *(char *)(kernel_base + 0x2001516) |= 0x14;
