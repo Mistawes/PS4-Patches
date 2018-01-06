@@ -1,5 +1,14 @@
 # PS4-Patches
-Gathering some of the snippets I've seen posted around the interwebs. I haven't tested anything yet, nor is it my work. Will try to keep credits 
+Gathering some of the snippets I've seen posted around the interwebs. I haven't tested anything yet, nor is it my work. Will try to keep credits where possible. Presume they're for 4.05 unless otherwise noted.
+
+```
+  // flatz 4.55
+  // Disable RSA signature check for PFS.
+	kernel_text_base + 0x69F4E0: 55 48 89 E5 -> 31 C0 C3 90
+
+	// Enable debug RIFs.
+	kernel_text_base + 0x62D30D: E8 0E 04 00 00 EB 38 3D -> B8 01 00 00 00 EB 38 3D
+```
 
 ```
 // 2much4u @2much4ux
