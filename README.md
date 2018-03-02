@@ -77,3 +77,7 @@ kernelBase[0x1B6D0C8] |= 0x1;
 *(uint32_t*)&kernelBase[0x4D70F7] = 0;
 *(uint32_t*)&kernelBase[0x4D7F81] = 0;
 ```
+```
+//Vultra UART Enabler 4.55
+*(char *)(kernel_base + 0x1997BC8) = 0;
+```
