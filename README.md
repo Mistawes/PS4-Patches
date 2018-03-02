@@ -61,3 +61,17 @@ writeCr0(cr0 & ~X86_CR0_WP);
 *(uint16_t *)(kernel_base + 0x200151C) = 0x8101;
 // </WildCard - KernelDumper>
 ```
+
+## 4.55
+
+```
+// Full debug settings offsets for 4.55
+
+kernelBase[0x1B6D086] |= 0x14;
+kernelBase[0x1B6D0A9] |= 0x3;
+kernelBase[0x1B6D0AA] |= 0x1;
+kernelBase[0x1B6D0C8] |= 0x1;
+// Disable write protection
+*(uint32_t*)&kernelBase[0x4D70F7] = 0;
+*(uint32_t*)&kernelBase[0x4D7F81] = 0;
+```
