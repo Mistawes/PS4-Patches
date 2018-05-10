@@ -63,6 +63,13 @@ writeCr0(cr0 & ~X86_CR0_WP);
 ```
 
 ## 4.55
+```
+// Joonie86
+// TargetID patches for 4.55 (Spoofs to Devkit)
+*(uint16_t *)(kernel_base + 0x1AF82C4) = 0x8101;
+*(uint16_t *)(kernel_base + 0X1AF85A4) = 0x8101;
+*(uint16_t *)(kernel_base + 0x1B6D08C) = 0x8101;
+```
 
 ```
 // 2much4u
