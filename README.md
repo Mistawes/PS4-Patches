@@ -4,7 +4,6 @@ Gathering some of the snippets I've seen posted around the interwebs. This is no
 Feel free to submit PRs!
 
 
-```
 ## 4.05
 
 ```
@@ -43,6 +42,7 @@ Kernel patch to disable process ASLR on 4.05
 *(uint16_t *)(kernel_base + 0X1FE5A2C) = 0x8101;
 *(uint16_t *)(kernel_base + 0x200151C) = 0x8101;
 // </WildCard - KernelDumper>
+```
 ```
 // Correct patches to enable mmap of all SELF
 *(uint8_t*)(kernel_base + 0x31EE40) = 0x90;
